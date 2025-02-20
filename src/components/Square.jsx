@@ -1,12 +1,16 @@
 // import { useState } from "react";
 
-const Game = () => {
+const Square = () => {
   return (
-    <div className="game">
-      <h2>Game</h2>
-      <div>test grid</div>
+    <div
+      style={{
+        backgroundColor: "gold",
+        margin: 10,
+        padding: 20,
+      }}>
+      <div>Square</div>
     </div>
   );
 };
 
-export { Game };
+export { Square };

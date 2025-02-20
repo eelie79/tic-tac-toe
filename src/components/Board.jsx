@@ -3,9 +3,14 @@ import { Square } from "./Square";
 
 const Board = () => {
   return (
-    <div className="game">
-      <h2>Game</h2>
-      <div>test grid</div>
+    <div
+      style={{
+        backgroundColor: "skyblue",
+        margin: 10,
+        padding: 20,
+      }}>
+      <h2>Board</h2>
+      <Square />
     </div>
   );
 };
