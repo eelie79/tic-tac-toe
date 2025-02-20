@@ -1,14 +1,10 @@
 // import { useState } from "react";
+import "./style.css";
 import { Board } from "./Board";
 
 const Game = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "salmon",
-        margin: 10,
-        padding: 20,
-      }}>
+    <div className="game">
       Game
       <Board />
     </div>

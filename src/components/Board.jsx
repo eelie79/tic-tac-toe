@@ -9,8 +9,18 @@ const Board = () => {
         margin: 10,
         padding: 20,
       }}>
-      <h2>Board</h2>
-      <Square />
+      <div className="class board-row">
+        {/* prettier-ignore */}
+        <Square /> <Square /> <Square />
+      </div>
+      <div className="class board-row">
+        {/* prettier-ignore */}
+        <Square /> <Square /> <Square />
+      </div>
+      <div className="class board-row">
+        {/* prettier-ignore */}
+        <Square /> <Square /> <Square />
+      </div>
     </div>
   );
 };
