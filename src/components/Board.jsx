@@ -2,24 +2,20 @@
 import { Square } from "./Square";
 
 const Board = () => {
+  const renderSquare = () => {
+    return <Square value="O" />;
+  };
+
   return (
-    <div
-      style={{
-        backgroundColor: "skyblue",
-        margin: 10,
-        padding: 20,
-      }}>
+    <div className="board">
       <div className="class board-row">
-        {/* prettier-ignore */}
-        <Square /> <Square /> <Square />
+        {renderSquare()} {renderSquare()} {renderSquare()}
       </div>
       <div className="class board-row">
-        {/* prettier-ignore */}
-        <Square /> <Square /> <Square />
+        {renderSquare()} {renderSquare()} {renderSquare()}
       </div>
       <div className="class board-row">
-        {/* prettier-ignore */}
-        <Square /> <Square /> <Square />
+        {renderSquare()} {renderSquare()} {renderSquare()}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 // import { useState } from "react";
 
-const Square = () => {
+const Square = (props) => {
   return (
     <div className="square">
-      <span> X </span>
+      <span> {props.value} </span>
     </div>
   );
 };

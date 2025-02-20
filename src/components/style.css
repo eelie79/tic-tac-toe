@@ -4,7 +4,11 @@
     align-items: center;
 }
 
-.board {}
+.board {
+    background-color: "skyblue";
+    margin: 10px;
+    padding: 20px;
+}
 
 
 .square {
