@@ -2,20 +2,20 @@
 import { Square } from "./Square";
 
 const Board = () => {
-  const renderSquare = () => {
-    return <Square value="O" />;
+  const renderSquare = (i) => {
+    return <Square value={i} />;
   };
 
   return (
     <div className="board">
       <div className="class board-row">
-        {renderSquare()} {renderSquare()} {renderSquare()}
+        {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
       </div>
       <div className="class board-row">
-        {renderSquare()} {renderSquare()} {renderSquare()}
+        {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
       </div>
       <div className="class board-row">
-        {renderSquare()} {renderSquare()} {renderSquare()}
+        {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
       </div>
     </div>
   );

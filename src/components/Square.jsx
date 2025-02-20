@@ -2,9 +2,13 @@
 
 const Square = (props) => {
   return (
-    <div className="square">
-      <span> {props.value} </span>
-    </div>
+    <button
+      className="square"
+      onClick={() => {
+        console.log(`Square ${props.value} clicked!`);
+      }}>
+      {props.value}
+    </button>
   );
 };
 
