@@ -1,9 +1,12 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { Square } from "./Square";
 
 const Board = () => {
+  const initialSquares = [null, null, null, null, null, null, null, null, null];
+  const [squares, setSquares] = useState(initialSquares);
+
   const renderSquare = (i) => {
-    return <Square value={i} />;
+    return <Square value={squares[i]} />;
   };
 
   return (
