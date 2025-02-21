@@ -24,6 +24,7 @@ const Board = () => {
   };
   console.log(squares);
 
+  // 클릭할때 마다 인덱스 번호 돌려줌
   const renderSquare = (i) => {
     return (
       <Square
@@ -35,8 +36,8 @@ const Board = () => {
     );
   };
 
-  // squares 클릭한 사각형의 인덱스 배열 -> 이기는 배열
-  function calculateWinner(squares) {
+  // squares 클릭한 사각형의 인덱스 배열 ['X', 'O', null, null, 'X', 'O', null, null, 'X'] -> 이기는 배열 lines [X, 1, 2]
+  const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -48,8 +49,10 @@ const Board = () => {
       [2, 4, 6], // diagonals
     ];
 
+    // lines 우증 조합 배열 만큼 반복하면서 해당 클릭 인텍스의 문자 a, b, c 가 우승조합 인덱스번호와 같은지 확인
     for (let line of lines) {
-      const [a, b, c] = line;
+      const [a, b, c] = line; // [0, 1, 2] == [X, X, X] -> Win
+      console.log(squares[a], squares[b], squares[c]);
 
       // 1. null 이 아니니? 2. X = X 두번째 문자가 같니? 3.3번째 문자가 같니?
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -58,7 +61,7 @@ const Board = () => {
     }
 
     return null;
-  }
+  };
 
   const winner = calculateWinner(squares); // "X" : "O"
   // const player = `Next Player: ${xIsNext ? "X" : "O"}`;
