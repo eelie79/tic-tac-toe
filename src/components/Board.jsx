@@ -13,6 +13,17 @@ const Board = () => {
 
     // 1. Make a copy of squares state array
     const newSquares = [...squares];
+    console.log("newSquares: " + newSquares); // newSquares: X,O,X,,X,O,X,O, 클릭한 문자배열
+
+    // 게임종료 후 클릭방지 & 이미 클릭한 square 클릭방지
+    const winnerDeclared = Boolean(calculateWinner(newSquares)); // calculateWinner
+    const squareFilled = Boolean(newSquares[i]); // 클릭한 인덱스에 값이 있는지 확인
+
+    console.log("calculateWinner: " + calculateWinner(newSquares), newSquares[i]); // null null or X null 둘중 하나만 true면 return
+    // winner가 나왔거나 클릭한 인덱스 클릭시 리턴
+    if (winnerDeclared || squareFilled) {
+      return;
+    }
 
     // 2. Mutate the copy, setting the i--th element to "X"
     newSquares[i] = xIsNext ? "X" : "O"; // true면 X, false면 O
